@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/project/MVVMStarted/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/project/MVVMStarted/core/src/main/res/layout/alert_emoji.xml" value="0.16666666666666666" />
         <entry key="..\:/project/MVVMStarted/core/src/main/res/layout/item_list.xml" value="0.2" />
       </map>
     </option>

@@ -9,6 +9,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.ngga_ring.core.adapter.EmojiAdapter
+import com.ngga_ring.core.alert.EmojiAlert
 import com.ngga_ring.core.emojiList.Expression
 import com.ngga_ring.mvvmstarted.databinding.ActivityMainBinding
 
@@ -18,24 +19,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setupRecler()
-        binding.rvEmoji.adapter?.let { adapter ->
-            if (adapter is EmojiAdapter) {
-                adapter.setEmoji(Expression.data)
-            }
-        }
+//        setupRecler()
+//        binding.rvEmoji.adapter?.let { adapter ->
+//            if (adapter is EmojiAdapter) {
+//                adapter.setEmoji(Expression.data)
+//            }
+//        }
 
-
+        EmojiAlert.ShowAlert(this)
+    }
 
 
     }
 
-    private fun setupRecler() {
-        binding.rvEmoji.apply {
-            layoutManager = StaggeredGridLayoutManager(10, StaggeredGridLayoutManager.VERTICAL)
-            adapter = EmojiAdapter(mutableListOf(), this@MainActivity){
-                Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
+//    private fun setupRecler() {
+//        binding.rvEmoji.apply {
+//            layoutManager = StaggeredGridLayoutManager(10, StaggeredGridLayoutManager.VERTICAL)
+//            adapter = EmojiAdapter(mutableListOf(), this@MainActivity){
+//                Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
+//            }
+//        }
+//    }
 }
